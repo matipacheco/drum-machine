@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Pad from "./components/Pad";
 import { DRUM_MACHINE_SIZE } from "./utils/constants"
 
+// https://stackoverflow.com/questions/45949874/reactjs-onkeypress-to-trigger-a-button-press
+
 function App() {
   const [drumMachineSize, ] = useState(Array.from(Array(DRUM_MACHINE_SIZE).keys()));
 
