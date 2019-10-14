@@ -9,7 +9,6 @@ function Pad(props) {
 
   return (
     <button
-      onClick={() => {alert(padKeyCode)}}
       className={`btn btn-pan ${ getPadColor(padRow, padCol) }`}
     />
   )
