@@ -11,3 +11,73 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.btn-pan {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 20px;
+}
+
+.light-greenish-blue {
+  background-color: #55efc4
+}
+
+.faded-poster {
+  background-color: #81ecec;
+}
+
+.green-darner-tail {
+  background-color: #74b9ff;
+}
+
+.shy-moment {
+  background-color: #a29bfe;
+}
+.mint-leaf {
+  background-color: #00b894;
+}
+.robins-egg-blue {
+  background-color: #00cec9;
+}
+.electron-blue {
+  background-color: #0984e3;
+}
+
+.exodus-fruit {
+  background-color: #6c5ce7;
+}
+
+.sour-lemon {
+  background-color: #ffeaa7;
+}
+
+.first-date {
+  background-color: #fab1a0;
+}
+
+.pink-glamour {
+  background-color: #ff7675;
+}
+
+.pico-8-pink {
+  background-color: #fd79a8;
+}
+.bright-yarrow {
+  background-color: #fdcb6e;
+}
+
+.orangeville {
+  background-color: #e17055;
+}
+
+.chi-gong {
+  background-color: #d63031;
+}
+
+.prunus-avium {
+  background-color: #e84393;
+}
+
+.dracula-orchid {
+  background-color: #2d3436;
+}

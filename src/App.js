@@ -1,24 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Pad from "./components/Pad";
+import { DRUM_MACHINE_SIZE } from "./utils/constants"
 
 function App() {
+  const [drumMachineSize, ] = useState(Array.from(Array(DRUM_MACHINE_SIZE).keys()));
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='container text-center d-flex flex-column'>
+      {
+        drumMachineSize.map((rowIndex) => {
+          return (
+            <div key={rowIndex} className='row my-5'>
+              {
+                drumMachineSize.map((colIndex) => {
+                  return (
+                    <div key={colIndex} className="col">
+                      <Pad rowIndex={rowIndex} colIndex={colIndex}/>
+                    </div>
+                  )
+                })
+              }
+            </div>
+          )
+        })
+      }
     </div>
   );
 }
