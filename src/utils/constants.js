@@ -50,10 +50,10 @@ const padSounds = [
 ];
 
 const padSoundDuration = [
-  [0.5, 0.5, 0.5, 0.5],
-  [0.5, 0.5, 0.5, 0.5],
-  [0.5, 0.5, 0.5, 0.5],
-  [0.5, 0.5, 0.5, 0.5]
+  [0.2, 0.2, 0.2, 0.2],
+  [0.2, 0.2, 0.2, 0.2],
+  [0.2, 0.2, 0.2, 0.2],
+  [0.2, 0.2, 0.2, 0.2]
 ];
 
 export function getPadAttackReleaseParams(rowIndex, colIndex) {
