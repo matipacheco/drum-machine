@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 
 function PlayPause() {
-  const [active, setActive] = useState(false);
+  const [isRecording, setIsRecording] = useState(false);
 
   const toggleClass = () => {
-    setActive(!active)
+    setIsRecording(!isRecording)
   };
 
   return (
-    <div className="fixed-bottom text-center play-pause">
-      <a className={`play ${active ? 'active' : ''}`} onClick={ toggleClass }/>
+    <div className="fixed-bottom text-center recording-backgroung">
+      <button id='recording-button' className={`${isRecording ? 'recording' : 'not-recording'}`} onClick={ toggleClass }/>
     </div>
   )
 }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import Pad from "./components/Pad";
-import { DRUM_MACHINE_SIZE } from "./utils/constants"
-import PlayPause from "./components/PlayPause";
+import Pad from "./Pad";
+import { DRUM_MACHINE_SIZE } from "../utils/constants"
+import PlayPause from "./PlayPause";
 
 // https://stackoverflow.com/questions/45949874/reactjs-onkeypress-to-trigger-a-button-press
 // https://medium.com/@dhilipkmr/ripple-in-react-3162875cc9af
