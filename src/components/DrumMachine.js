@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import Pad from "./Pad";
-import { DRUM_MACHINE_SIZE } from "../utils/constants"
+import PadGrid from "./PadGrid";
+import RecordingsLog from "./RecordingsLog"
 import PlayPause from "./PlayPause";
+
+import { DRUM_MACHINE_SIZE } from "../utils/constants"
 
 // https://stackoverflow.com/questions/45949874/reactjs-onkeypress-to-trigger-a-button-press
 // https://medium.com/@dhilipkmr/ripple-in-react-3162875cc9af
@@ -13,26 +15,11 @@ function DrumMachine() {
 
   return (
     <div>
-      <div className='container text-center d-flex flex-column'>
-        {
-          drumMachineSize.map((rowIndex) => {
-            return (
-              <div key={rowIndex} className='row my-4'>
-                {
-                  drumMachineSize.map((colIndex) => {
-                    return (
-                      <div key={colIndex} className="col">
-                        <Pad rowIndex={rowIndex} colIndex={colIndex}/>
-                      </div>
-                    )
-                  })
-                }
-              </div>
-            )
-          })
-        }
+      <div className='d-flex full-height'>
+        <PadGrid drumMachineSize={drumMachineSize}/>
+        <RecordingsLog recordings={[]}/>
       </div>
-
+    
       <PlayPause/>
     </div>
   );
