@@ -187,8 +187,16 @@ code {
   height: 100vh;
 }
 
-.sound-log-backgroung {
+.recording-log-backgroung {
   background-color: #34495e;
+}
+
+.recording-properties {
+  background-color: #dff9fb;
+  height: 3.3rem;
+  justify-content: space-around;
+  /* background-color: #eaeaea; */
+  /* background-color: #c7ecee; */
 }
 
 .pad-grid-pt {
@@ -197,4 +205,8 @@ code {
 
 h2 {
   color: #eaeaea;
+}
+
+.record-action-icon {
+  color: #4a69bd;
 }

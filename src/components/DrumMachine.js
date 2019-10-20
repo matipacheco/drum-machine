@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PadGrid from "./PadGrid";
-import RecordingsLog from "./RecordingsLog"
+import RecordsLog from "./RecordsLog"
 import PlayPause from "./PlayPause";
 
 import { DRUM_MACHINE_SIZE } from "../utils/constants"
@@ -17,7 +17,7 @@ function DrumMachine() {
     <div>
       <div className='d-flex full-height'>
         <PadGrid drumMachineSize={drumMachineSize}/>
-        <RecordingsLog recordings={[]}/>
+        <RecordsLog recordings={[1,2]}/>
       </div>
     
       <PlayPause/>
