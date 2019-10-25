@@ -1,11 +1,15 @@
-const RECORDING = false;
-
-export default function isRecordingReducer(state = RECORDING, action) {
+export function updateRecordingStatusReducer(state, action) {
   switch (action.type) {
-    case 'TOGGLE_RECORDING':
-      return !action.payload;
+    case 'UPDATE_RECORDING_STATUS':
+      return {
+        startTime: action.payload.startTime,
+        isRecording: action.payload.isRecording
+      };
 
     default:
-      return RECORDING;
+      return {
+        startTime: null,
+        isRecording: false,
+      };
   }
 }

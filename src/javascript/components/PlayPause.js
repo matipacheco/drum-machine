@@ -3,15 +3,23 @@ import KeyboardEventHandler from 'react-keyboard-event-handler';
 
 import { connect } from 'react-redux';
 import store from "../store";
-import toggleRecordingDispatcher from '../dispatchers/toggleRecordingDispatcher'
+import updateRecordingStatusDispatcher from "../dispatchers/recordingsDispatcher";
 
 
 function PlayPause(props) {
   const [isRecording, setIsRecording] = useState(props.isRecording);
+  const [recordingStartTime, setRecordingStartTime] = useState(null);
 
   const toggleClass = () => {
+    const startTime = new Date();
+
     setIsRecording(!isRecording);
-    store.dispatch(toggleRecordingDispatcher(!isRecording))
+    setRecordingStartTime(recordingStartTime ? null : startTime);
+
+    store.dispatch(updateRecordingStatusDispatcher(
+      (recordingStartTime ? null : startTime),
+      !isRecording)
+    );
   };
 
   return (
