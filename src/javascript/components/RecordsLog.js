@@ -18,4 +18,10 @@ function RecordsLog(props) {
   )
 }
 
-export default RecordsLog;
+const mapStateToProps = (state) => {
+  return {
+    recordings: state.recordings,
+  }
+};
+
+export default connect(mapStateToProps)(RecordsLog);
