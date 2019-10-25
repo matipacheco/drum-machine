@@ -2,6 +2,9 @@ import React from 'react';
 
 import Record from './Record'
 
+import { connect } from 'react-redux';
+
+
 function RecordsLog(props) {
   return (
     <div className='w-30 recording-log-backgroung py-3 container'>

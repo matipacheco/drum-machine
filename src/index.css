@@ -12,10 +12,14 @@ code {
     monospace;
 }
 
-.btn-pan {
+.btn-pad {
   width: 6rem;
   height: 6rem;
   border-radius: 20px;
+}
+
+.btn-pad:hover {
+  cursor: pointer;
 }
 
 .light-greenish-blue {
