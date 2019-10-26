@@ -1,10 +1,14 @@
 import { combineReducers, createStore } from 'redux';
 
-import recordingReducer from "./reducers/recordingsReducer";
-import { updateRecordingStatusReducer } from "./reducers/isRecordingReducer";
+import {
+  addBeatReducer,
+  recordingReducer,
+  updateRecordingStatusReducer
+} from "./reducers/recordingsReducer";
 
 const reducers = combineReducers({
   recordings: recordingReducer,
+  currentRecording: addBeatReducer,
   recordingStatus: updateRecordingStatusReducer,
 });
 

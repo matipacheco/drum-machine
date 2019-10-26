@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   getPadColor,
   getPadAttackReleaseParams
@@ -7,18 +7,39 @@ import {
 import Tone from "tone";
 
 import { connect } from 'react-redux';
-
+import store from "../store";
+import { addBeatToRecording } from "../dispatchers/recordingsDispatcher";
 
 function Pad(props) {
   const [padRow, ] = useState(props.rowIndex);
   const [padCol, ] = useState(props.colIndex);
-  const [isRecording, ]         = useState(props.isRecording);
-  const [recordingStartTime, ]  = useState(props.startTime);
+  const [isRecording, setIsRecording] = useState(props.isRecording);
+  const [recordingStartTime, setRecordingStartTime] = useState(props.startTime);
+
+  const [note, duration] = getPadAttackReleaseParams(padRow, padCol);
+
+  useEffect(() => {
+    setIsRecording(props.isRecording);
+    setRecordingStartTime(props.startTime)
+  });
+
+  const addSoundToRecording = () => {
+    const now = new Date().getTime();
+    const thaBeat = {
+      ts: now,
+      note: note,
+      time: (now - recordingStartTime) / 1000,
+    };
+
+    store.dispatch(addBeatToRecording(thaBeat))
+  };
 
   const playPadSound = (event) => {
     event.preventDefault();
-    const [note, duration] = getPadAttackReleaseParams(padRow, padCol);
     new Tone.Synth().toMaster().triggerAttackRelease(note, duration);
+    
+    if (isRecording)
+      addSoundToRecording();
   };
 
   return (

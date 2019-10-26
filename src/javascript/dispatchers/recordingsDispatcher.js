@@ -1,4 +1,4 @@
-const updateRecordingStatusDispatcher = (startTime = null, isRecording = false) => ({
+export const updateRecordingStatusDispatcher = (startTime = null, isRecording = false) => ({
   type: 'UPDATE_RECORDING_STATUS',
   payload: {
     startTime: startTime,
@@ -6,4 +6,7 @@ const updateRecordingStatusDispatcher = (startTime = null, isRecording = false) 
   },
 });
 
-export default updateRecordingStatusDispatcher;
+export const addBeatToRecording = (thaBeat = {}) => ({
+  type: 'ADD_BEAT',
+  payload: thaBeat
+});

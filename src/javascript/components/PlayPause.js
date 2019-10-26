@@ -3,7 +3,7 @@ import KeyboardEventHandler from 'react-keyboard-event-handler';
 
 import { connect } from 'react-redux';
 import store from "../store";
-import updateRecordingStatusDispatcher from "../dispatchers/recordingsDispatcher";
+import { updateRecordingStatusDispatcher } from "../dispatchers/recordingsDispatcher";
 
 
 function PlayPause(props) {

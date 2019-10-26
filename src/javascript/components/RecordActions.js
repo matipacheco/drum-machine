@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 function RecordActions() {
-  const [playingRecord, setPlayingRecord] = useState(true);
+  const [playingRecord, ] = useState(true);
 
   return(
     <span className='my-auto'>
